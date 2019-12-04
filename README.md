@@ -73,3 +73,9 @@ server available in this repository:
 https://gitlab.com/arashkay/halloffameserver/tree/master
 
 you can clone and run in local
+
+you should run
+
+  `npm i` 
+ 
+ to install dependency
