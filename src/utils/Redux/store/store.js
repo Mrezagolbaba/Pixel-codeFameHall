@@ -7,6 +7,7 @@ import createSagaMiddleware from 'redux-saga'
 import rootSaga from '../saga';
 import AllReducer from '../reducers';
 
+//config store for all reducer and saga
 const configureStore = () => {
     const sagaMiddleware = createSagaMiddleware();
     const store = createStore(

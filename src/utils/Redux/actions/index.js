@@ -28,6 +28,7 @@ function getArticleFailure () {
 }
 
 //****************************************************************************************************************************************************************//
+//send id for get single page
 function fetchArticleAction (id) {
     return {
         type: GET_SINGLE_ARTICLE,

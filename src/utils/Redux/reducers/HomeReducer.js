@@ -3,6 +3,7 @@ import {
     GET_ARTICLE_SUCCESS,
 } from '../constants';
 const initialState = [];
+//reducer for home items 
 const articleReducer = (state = initialState, action={}) => {
     switch (action.type) {
         case GET_ARTICLE_SUCCESS:

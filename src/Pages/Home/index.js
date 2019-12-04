@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
 
 
  function Home(props) {
-
+    //set request for list items
      useEffect(() => {
          props.articlesActions();
      },[]);

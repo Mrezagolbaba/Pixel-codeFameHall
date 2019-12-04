@@ -54,9 +54,11 @@ const useStyles = makeStyles(theme => ({
 
 
  function Single(props) {
+     //set request for single items
     useEffect(() => {
       props.onFetchArticle(props.match.params.id)
     },[]);
+
     const classes = useStyles();
 
     return (
@@ -71,10 +73,8 @@ const useStyles = makeStyles(theme => ({
                        <Container maxWidth="sm">
                            <CardMedia
                                className={classes.cardMedia}
-                               // src={props.article.image}
                                image={props.article.image}
                            />
-
                            <Typography gutterBottom variant="h5" component="h2">
                                {props.article.name}
                            </Typography>
@@ -94,8 +94,8 @@ const useStyles = makeStyles(theme => ({
         </React.Fragment>
     );
 }
+//result request for single page
 const mapStateToProps= (state)=> {
-     console.log('stateeee',state.SingleArticleReducer)
     return {
         article:state.SingleArticleReducer.return
     }

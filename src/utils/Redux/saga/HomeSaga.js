@@ -10,7 +10,7 @@ import {
     getArticleFailureSingle
 } from '../actions';
 
-
+//request for list of items
 const fetchArticle = () => {
     return fetch('http://localhost:3000/fames?guest=true', {
         method:'GET',
@@ -22,7 +22,7 @@ const fetchArticle = () => {
         .then(response => response.json())
 };
 
-
+//request for single items
 const fetchArticleSingle = (id) => {
 
     return fetch('http://localhost:3000/fames/'+id+'?guest=true', {
@@ -32,12 +32,10 @@ const fetchArticleSingle = (id) => {
             'X-Requested-With':'XMLHttpRequest',
         }
     })
-        .then(response => response.json()
-
-
-        )
+        .then(response => response.json())
 };
 
+//function for list request
 function* getArticle () {
     try {
         const receiveArticle = yield call(fetchArticle);
@@ -47,6 +45,7 @@ function* getArticle () {
     }
 }
 
+//function for single request
 function* getArticleSingle (action) {
     const id = yield select((state)=>{
         return state.SingleArticleReducer.id
@@ -63,7 +62,7 @@ function* getArticleSingle (action) {
 }
 
 
-
+//watcher for all of function
 function* watchGetArticle () {
 
     yield takeEvery(GET_ARTICLE, getArticle);

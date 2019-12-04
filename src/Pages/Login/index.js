@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.secondary.main,
     },
     form: {
-        width: '100%', // Fix IE 11 issue.
+        width: '100%',
         marginTop: theme.spacing(1),
     },
     submit: {
@@ -33,9 +33,13 @@ const useStyles = makeStyles(theme => ({
 export default function SignIn() {
     const classes = useStyles();
     let history = useHistory();
+
+    //change url to home
     function handleClick() {
         history.push("/home");
     }
+
+
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
